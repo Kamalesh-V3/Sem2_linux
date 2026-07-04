@@ -1,0 +1,132 @@
+Basic Linux Commands
+
+1.Display current date and time.
+
+Syntax:date
+It displays the currewnt date and time.
+output:
+[24bcs105@mepcolinux linux]$date
+Tue Feb 25 17:00:32 IST 2025
+
+2.Display only the month name of the current date.
+
+Syntax:date +"%B"
+It displays the current date's month only.
+output:
+[24bcs105@mepcolinux linux]$date +"%B"
+February
+
+3.Commands to create directory and file.
+
+Syntax:mkdir(directory name)
+It creates the directory.
+Syntax:touch(file name)
+It creates the file.
+output:
+[24bcs105@mepcolinux linux]$mkdir linux1
+[24bcs105@mepcolinux linux]$touch f1.txt
+[24bcs105@mepcolinux linux]$ls
+f1.txt  linux1
+
+4.Display your own username.
+
+Syntax:whoami
+It displays the own username.
+output:
+[24bcs105@mepcolinux linux]$whoami
+24bcs105
+
+5.Display the list of current users and your username.
+
+Syntax:who
+It displays the list of current users.
+output:
+[24bcs105@mepcolinux linux]$who
+24bcs066 pts/0        2025-03-04 13:26 (172.16.30.66)
+24bcs005 pts/1        2025-03-04 13:27 (172.16.30.132)
+24bcs121 pts/3        2025-03-04 13:27 (172.16.30.59)
+24bcs084 pts/4        2025-03-04 13:26 (172.16.30.51)
+23bcs017 pts/6        2025-03-04 13:30 (172.16.31.158)
+
+6.Display the manual pages for date command page by page.
+
+Syntax:man date
+It displays the manual pages for date command.
+output:
+[24bcs105@mepcolinux linux]$man date
+NAME
+       date - print or set the system date and time
+
+SYNOPSIS
+       date [OPTION]... [+FORMAT]
+       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+
+7.Display the system name in the network.
+
+Syntax:hostname
+It displays the host of the system.
+output:
+[24bcs105@mepcolinux linux]$hostname
+mepcolinux.mepcoeng.ac.in
+
+8.Print your name on terminal using echo.
+
+Syntax:echo
+It prints the name.
+output:
+[24bcs105@mepcolinux linux]$echo Kamalesh
+Kamalesh
+
+9.Display available disk space and disk usage.
+
+Syntax:df or df -h
+It displays disk space.
+output:
+[24bcs105@mepcolinux linux]$df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs         32G     0   32G   0% /dev
+tmpfs            32G   32K   32G   1% /dev/shm
+tmpfs            32G     0   32G   0% /sys/fs/cgroup
+/dev/sda5       438G   12G  427G   3% /
+
+syntax:du or du -h
+It diplays dish usage.
+output:
+[24bcs105@mepcolinux linux]$du -h
+4.0K	./linux1
+8.0K	.
+
+10.Work with filter commands on date.
+
+syntax:sort (filename)
+It is used to displays the date in sorted order.
+for ascending -d,descending -r,numerical -n
+output:
+[24bcs105@mepcolinux linux]$sort -d f1.txt
+apr
+feb
+jan
+mar
+[24bcs105@mepcolinux linux]$sort -r f1.txt
+mar
+jan
+feb
+apr
+
+11.Create a compressed file archieve using tar commands.
+
+Synatx:tar -cvzf archieve.tar filename
+It creates a compressed file archieve using tar commands.
+output:
+[24bcs105@mepcolinux linux]$tar -cvzf 2025.tar.gz linux1
+linux1/
+
+12.Extract files from archieve tar.
+
+Syntax:tar -xvzf archieve.tar
+It extracts files from archieve tar.
+output:
+[24bcs105@mepcolinux linux]$tar -xvzf 2025.tar.gz
+linux1/
+[24bcs105@mepcolinux linux]$ls
+2025.tar.gz  exp1.prn  exp2.prn  f1.txt  linux1
