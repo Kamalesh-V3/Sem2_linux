@@ -1,0 +1,60 @@
+1.Init command to shutdown,restsrt and boot the system.
+
+1)syntax:shutdown-'init 0'
+It shuts down the system and brings the system to half state
+command:$shutdown-'init0'
+
+2)syntax:restart-init 6'
+It restarts the system haalts all process and reboot the system
+command:$restart-'init 6'
+
+3)syntax:bool-init<runlevel>
+It boot into different runlevel you can specify the different runlevel between 0 and 6
+commmand:$bool-init 5
+
+2.Command to schedule a system shutdown in 10 minutes
+
+syntax:shutdown-h+10
+This command schedules a system shutdown in 10 minutes and sent a message to users logged to indicate
+command:$sudo shutdown-h+10
+
+3.comand to immediateltart the computer
+
+syntax:shutdown -r now
+It will immediately restarts the computer without any delay
+command:$sudo shutdown -r now
+
+4.Comand to create a delayed reboot with 5 minutes delay
+
+syntax:shutdown-r+5
+It schedule for restart computer with 5 minutes delay and send message to user logged
+comand:sudo shutdown-r+5
+
+5,6.To check scheduled shutdown and cancel shutdown
+
+syntax:shutdown-c
+It checks for any scheduled system shutdowns and also cancels then if there cancellation of shutdown
+command:$sudo shutdown-c
+
+7.command to use the emergency reboot comand to forcefully restart the system.
+
+syntax:reboot-f
+It forcefully restarts the system without properly terminating process.It result in data loss or system instability.
+It should used when systems in critical state.
+command:$sdo reboot-f
+
+8.Command to indicate a systems shutdown with specific message to users
+
+syntax:shutdown -h now
+It immediately indicates a system shutdown and sends specified message to users
+command:sudo shutdown-h now
+
+9.Command to schedule an imediate shutdown of the computer
+ syntax:shutdown-h now
+ It schedules an immediate shutdown of computer and send message to user
+command:sudo shuttdown-h now"immediate shutdown"
+
+10)Command to check the current runlevel of system
+syntax runlevel=who-r(or)init 4
+It display current runlevel of system 
+It indicates State in which system operating 
